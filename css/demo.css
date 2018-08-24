@@ -167,5 +167,12 @@ h1 {
 
 }
 
+.prettyprint{
+   overflow: auto;
+   max-height: 520px;
+   line-height: 1.3;
+   font-size: 13px;
 
+
+}
 
