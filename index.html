@@ -16,7 +16,8 @@
 <!--jQuery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
+<!--Prettify-->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto|Ropa+Sans" rel="stylesheet" />
 <!--Menu Script-->
@@ -171,9 +172,9 @@ Your Logo
  
 
 <div class="tab-container">
-<span class="tab-name tab-name1-active">Web Design </span>
+<span class="tab-name tab-name1-active">Tab 1 </span>
 
-<span class="tab-name">Programming  </span>
+<span class="tab-name">Tab 2 </span>
  </div> <!--//Tab Container-->
 
 
@@ -442,8 +443,7 @@ The menu hide when user scroll down to read the article, but show immediately wh
 
 
 <h2>Swipe Menu HTML Structure</h2>
-<pre class="language-markup">
-<code>
+<pre class="prettyprint lang-markup">
 &lt;header class="swipe-menu default-theme"&gt;
    &lt;div class="logo"&gt; 
       Your Logo
@@ -526,7 +526,6 @@ The menu hide when user scroll down to read the article, but show immediately wh
    &lt;/nav&gt;
 &lt;/header&gt;
 &lt;div class="dim-overlay"&gt; &lt;/div&gt;
-</code>
 </pre>
 
 
@@ -535,9 +534,7 @@ The menu hide when user scroll down to read the article, but show immediately wh
 <h2> Swipe Menu CSS Code</h2>
 
 
-<pre class="language-css">
-<code>
-
+<pre class="prettyprint lang-css">
 * {margin: 0; padding: 0; }
 body{
 font-family: 'Roboto', sans-serif;
@@ -1788,7 +1785,6 @@ color: #fff;
 .default-theme .codehim-search input[type="text"]::-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.9);
 }
-</code>
 </pre>
 
 
@@ -1796,8 +1792,7 @@ color: #fff;
 <h2>Swipe Menu jQuery Code</h2>
 
 
-<pre class="language-js">
-<code>
+<pre class="prettyprint lang-js">
 $(document).ready(function(){
 
 //DropDown 
@@ -2037,7 +2032,6 @@ function swipedetect(el, callback){
         e.preventDefault()
     }, false)
 }
-</code>
 </pre>
 
 
