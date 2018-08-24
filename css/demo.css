@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+   background: #fff;
+
+}
+main{
+   margin: 0px; 
+   padding: 55px 10px; 
+   box-sizing: border-box;
+   position: inherit;
+   z-index: 2;
+   display: block;
+}
+article {
+  margin: 10px; 
+  color: #444;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  
+  
+}
+article > p{
+font-size: 14px;
+line-height: 1.5;
+}
+article > ol {
+  margin-left: 20px;
+  font-size: 15px;
+}
+article > ol li{
+  padding: 7px;
+
+}
+article > ul{
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+article > ul li {
+  padding: 6px;
+  list-style: none;
+ line-height: 1.4;
+}
+article > ul li:before{
+  content: "\f0a4 ";
+   font-family: FontAwesome;
+  margin-right: 8px;
+}
+h1, h2{
+   padding: 12px 0;
+   line-height: 1.3;
+}
+
+h2 {
+   border-bottom: 2px solid #eee;
+   font-size: 18pt;
+   margin-right: 20px;
+}
+
+
+/* Demo Only CSS */
+
+.browser{
+   text-align: center; 
+   margin-top: 20px;
+   margin-bottom: 15px;
+   
+}
+.browser table{
+   margin-left: auto;
+   margin-right: auto;
+  width: 300px;
+  border-collapse: collapse;
+  background: transparent;
+   
+  
+  
+}
+.browser td{
+  text-align: center;
+  font-size: 11px;
+  border: 0 !important;
+  padding: 8px;
+  
+}
+
+.browser td img{
+   width: 36px;
+   height: 36px; 
+   display: inline-block;
+   padding: 5px;
+   position: relative;
+   bottom: -8px;
+  border-radius: 2px;
+}
+.browser td span{
+  position: relative;
+  top: -8px;
+  color: #555;
+  border: 0 !important;
+}
+.box{
+   padding:15px 10px;
+   background: #fff;
+   border-radius: 4px;
+   margin: 10px 0;
+}
+
+
+.theme-tray{
+   padding:15px 10px;
+   text-align: center;
+   background: #fff;
+   
+   border-radius: 4px;
+}
+
+
+
+
+/* Themes name */
+.default,
+.red,
+.green,
+.blue,
+.orange,
+.black,
+.jellyfish,
+.pink,
+.maroon,
+.purple{
+   width: 60px;
+   height: 60px;
+   line-height: 60px;
+   display: inline-block;
+   font-size: 12px;
+   text-align: center;
+   cursor: pointer;
+   margin: 2px;
+   color: #fff;
+  border-radius: 4px;
+}
+
+.default{background:  #7CBB00; }
+.red {background: #e41b17; }
+.green {background: #387C44; }
+.blue {background: #306EFF; }
+.orange {background:  #F87217; }
+.black {background: #000; }
+.jellyfish {background:  #46C7C7; }
+.pink {background: #F52887; }
+.maroon {background: #810541; }
+.purple {background: #ff33ff; }
+@media only screen and (min-width: 480px){
+
+main{
+   width: 80%;
+   box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.2);
+   margin-left: auto;
+   margin-right: auto;
+
+}
+h1 {
+   text-align: center;
+
+}
+
+}
+
+
+
