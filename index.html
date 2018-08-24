@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<title>CSS Swipe Drawer Menu </title>
+
+<!--Demo CSS-->
+<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/swipe.css" />
+
+<!--Font Awesome-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!--jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto|Ropa+Sans" rel="stylesheet" />
+<!--Menu Script-->
+<script src="js/swipe.js"> </script>
+
+<!--Demo Only Script-->
+<script>
+$(document).ready(function(){
+
+var swipe = $(".swipe-menu");
+var theme = [
+"swipe-menu default-theme",
+"swipe-menu red-theme",
+"swipe-menu green-theme",
+"swipe-menu orange-theme",
+"swipe-menu pink-theme",
+"swipe-menu blue-theme",
+"swipe-menu maroon-theme",
+"swipe-menu jellyfish-theme",
+"swipe-menu black-theme",
+"swipe-menu purple-theme"
+];
+
+$(".default").click(function(){
+$(swipe).removeClass().addClass(theme[0]);
+});
+
+$(".red").click(function(){
+$(swipe).removeClass().addClass(theme[1]);
+});
+
+$(".green").click(function(){
+$(swipe).removeClass().addClass(theme[2]);
+});
+
+$(".orange").click(function(){
+$(swipe).removeClass().addClass(theme[3]);
+});
+
+$(".pink").click(function(){
+$(swipe).removeClass().addClass(theme[4]);
+});
+
+$(".blue").click(function(){
+$(swipe).removeClass().addClass(theme[5]);
+});
+
+$(".maroon").click(function(){
+$(swipe).removeClass().addClass(theme[6]);
+});
+
+$(".jellyfish").click(function(){
+$(swipe).removeClass().addClass(theme[7]);
+});
+
+$(".black").click(function(){
+$(swipe).removeClass().addClass(theme[8]);
+});
+
+$(".purple").click(function(){
+$(swipe).removeClass().addClass(theme[9]);
+});
+
+});
+</script>
+
+<style>
+@media only screen and (min-width: 620px){
+
+.show-popup {
+   width: 540px;
+   height: 400px;
+   box-shadow: 1px 2px 6px rgba(0, 0, 0, .5);
+   top: 50%;
+   left: 50%;
+   margin-left: -270px;
+   margin-top: -270px;
+   border-radius: 4px;
+  }
+.show-popup h4 {
+    text-align: center;
+    padding-left: 0;
+    font-size: 16pt;
+  }
+
+.show-popup .close-popup{
+   width: 45px;
+   height: 40px;
+   line-height: 40px;
+   position: absolute;
+   right: 10px;
+   top: 2px;
+   outline: 0;
+   font-size: 14pt;
+   color: rgba(255, 255, 255, 0.5);
+   text-align: right;
+}
+
+
+.show-popup .close-popup:before{
+    content: "\f00d"; 
+   font-family: FontAwesome;
+   font-weight: 300;
+}
+
+
+}
+
+.codehim-footer{
+  display: block;
+  padding: 15px;
+   color: #777;
+  font-size: 13px;
+  text-align: center;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+<!--Navigation-->
+<header class="swipe-menu default-theme">
+  
+<div class="logo"> 
+Your Logo
+</div>
+<div class="codehim-search-trigger">
+</div>
+<div class="codehim-search">
+<form>
+<input class="search-text" placeholder="Type to search..." autocomplete="on" name="search" type="text" />
+<button class="search-now" name="submit" type="submit" disabled="true"> Search </button>
+</form>
+<div class="back-arrow">
+</div>
+</div><!--//codehim-search-->
+
+
+
+<!--Navigation Icon-->
+<div class="nav-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+<nav class="codehim-nav">
+ 
+
+<div class="tab-container">
+<span class="tab-name tab-name1-active">Web Design </span>
+
+<span class="tab-name">Programming  </span>
+ </div> <!--//Tab Container-->
+
+
+
+
+<div class="tab tab-active">
+<ul class="menu-item">
+<li> <a href="#1"> CSS Layouts</a> </li> 
+<li class="has-sub"> <span class="dropdown-heading">CSS Navigations </span> 
+       <ul> 
+       <li><a href="#2">Breadcrumbs </a> </li>
+       <li> <a href="#2">CSS Menus </a> </li>
+       <li> <a href="#2">Paginations </a> </li>
+       <li> <a href="#2">CSS Dropdowns  </a> </li>
+       </ul>
+</li> 
+<li> <a href="#1"> CSS Tables </a> </li> 
+<li> <a href="#1"> CSS Forms</a> </li> 
+<li> <a href="#1"> CSS Buttons</a> </li> 
+</ul>
+
+
+<ul class="my-codehim">
+<li> <a class="help" href="#1"> Help &amp; Feedback </a> </li>
+<li> <a class="updates" href="#1"> Subscribe Me</a> </li>
+<li> <a class="request" href="#1"> Request for Code</a></li>
+
+</ul>
+
+<div class="social">
+
+<a href="#"><div class="facebook"></div> </a> 
+<a href="#"> <div class="twitter"></div> </a> 
+<a href="#"> <div class="gplus"> </div> </a>
+
+
+</div> <!--//social-->
+
+</div> <!--//Tab-->
+
+<div class="tab">
+
+
+<ul class="menu-item">
+<li> <a href="#1"> Basic Concepts </a> </li>
+<li class="has-sub"> <span class="dropdown-heading"> C++ Tutorials</span> 
+       <ul> 
+       <li><a href="#2"> Getting started</a> </li>
+       <li> <a href="#2"> Sub Item 2 </a> </li>
+       <li> <a href="#2"> Sub Item 3 </a> </li>
+       <li> <a href="#2"> Sub Item 4 </a> </li>
+<li> <a href="#2"> Sub Item 5 </a> </li>
+
+       </ul>
+</li> 
+<li class="has-sub"> <span class="dropdown-heading"> Adventure</span> 
+       <ul> 
+       <li><a href="#2"> Sub Item 1</a> </li>
+       <li> <a href="#2"> Sub Item 2 </a> </li> <li> <a href="#2"> Sub Item 3 </a> </li>
+       
+       
+       </ul>
+</li> 
+
+ 
+<li> <a href="#1"> Racing</a> </li> 
+</ul>
+
+
+</div> <!--//Tab-->
+
+</nav>
+
+
+
+
+</header>
+
+<!--dim background effect when open menu-->
+<div class="dim-overlay"> </div>
+
+
+<!--//End Navigation-->
+
+
+
+
+
+
+<!--Swipe Detector For Open And Close Drawer Navigation-->
+<div class="openswipe" id="swipezone">
+</div>
+<!--Pop up for Subscription-->
+<div class="popup-subscribe">
+<div class="top">
+<span class="close-popup"></span>
+<h4> Subscribe Me </h4>
+</div>
+<div class="codehim-card">
+<h5 class="never-miss"> Never miss my upcoming projects ! </h5>
+<p>
+Free subscribe to my newsletter to get exclusive web coding projects and website templates that I shared only with my subscribers. 
+ </p>
+<form>
+
+<input placeholder="Enter your email" name="email" type="text" class="mail-text" />
+<input type="submit" name="submit" value="Subscribe" /> 
+ 
+</form>
+   </div>
+</div> <!--//subscription popup-->
+
+<!--Pop up for Feedback-->
+
+<div class="popup-feedback">
+<div class="top">
+<span class="close-popup"></span>
+<h4> Feedback </h4>
+</div>
+
+
+<div class="codehim-card">
+<h5> I Love to hear from you ! </h5>
+<p> Write your precious feedback. </p>
+
+<form>
+
+<input placeholder="Enter your email" name="email" type="text" class="mail-text" />
+
+
+<textarea rows="6" name="feedback" type="text" class="feedback-text"></textarea>
+
+</form>
+   </div>
+
+   
+</div> <!--//feedback popup-->
+
+
+
+
+
+
+
+
+<!--Start Main-->
+
+<main>
+
+
+<article>
+
+
+
+<h1> Swipe Modern CSS Drawer Menu </h1>
+
+
+<p>
+The "Swipe Drawer" is a simple navigation system to organize your website's data in efficient way. It is fully supported by all modern browsers and devices. <br />
+<br />
+On mobile, this menu is fully touch friendly, you can open and close by swipe left and right respectively. However, menu trigger is also available to do the same work. 
+</p>
+<p>
+The menu hide when user scroll down to read the article, but show immediately when user scroll up. 
+</p>
+
+
+<!--Presentation of Menu Themes-->
+<h2> Menu Themes </h2>
+<div class="theme-tray">
+<div class="default" title="Default Theme"> </div>
+<div class="red" title="Red"></div>
+<div class="green" title="Green"></div>
+<div class="blue" title="Blue"></div>
+<div class="orange" title="Orange"></div>
+<div class="black" title="Black"></div>
+<div class="jellyfish" title="Jellyfish"></div>
+<div class="pink" title="Pink"></div>
+<div class="maroon" title="Maroon"></div>
+<div class="purple" title="Purple"></div>
+
+</div><!--//theme-tray-->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7089100907045419"
+     data-ad-slot="7782420780"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+
+<h2> Main Features</h2>
+
+<ul>
+<li>Fully responsive - will adapt to any device. </li>
+<li> Supports swipe to open and close menu. </li>
+<li> Show on top when user sroll up. </li>
+<li> Unlimited dropdown can be added. </li>
+<li> Small file size, fully themed, simple to implement. </li>
+<li> CSS transitions with jQuery fallback. </li>
+<li> Chrome, Safari, Firefox, Opera, IE7+, IOS, Android and windows phone supported. </li>
+<li>Attractive flat colors.</li>
+<li> Slide and Fade Effects. </li>
+<li> Clean and simple HTML structure. </li>
+<li> Auto width, Vertical Slide, Adaptiveheight, Rtl support... </li>
+<li> Font Awesome icons installed.</li>
+<li> SEO and user friendly.
+<li> Easy to navigate, implement and customize. </li>
+</ul>
+
+<h2>UI Features</h2>
+<ul>
+<li>Place for Logo </li>
+<li> Search Box </li>
+<li> Social Media Icons </li>
+<li> Navigation Tabs </li>
+<li> Drop Down </li>
+<li> jQuery Pop up box </li>
+
+</ul>
+
+<h2> Browsers Compatability</h2>
+
+<div class="browser">
+   <table>
+   <tbody>
+  <tr>
+<td> <img src="icons/browser/chrome.png" /> </td> 
+<td>
+<img src="icons/browser/safari.png" />
+</td>
+<td>
+<img src="icons/browser/edge.png" /> </td>
+<td>
+<img src="icons/browser/firefox.png" /> </td>
+<td>
+<img src="icons/browser/ie.png" />
+</td>
+</tr>
+
+<tr>
+<td><span> Chrome  </span> </td>
+<td> <span> Safari </i> </span> </td>
+<td> <span> Edge </i> </span> </td>
+<td> <span> Firefox  </span> </td>
+<td> <span> IE </span> </td>
+</tr>
+</tbody>
+  </table>
+</div>
+
+
+
+<h3>Written in:</h3>
+<ol>
+<li>HTML</li>
+<li> CSS</li>
+<li> jQuery</li>
+</ol>
+
+
+<h2>Swipe Menu HTML Structure</h2>
+<pre class="language-markup">
+<code>
+&lt;header class="swipe-menu default-theme"&gt;
+   &lt;div class="logo"&gt; 
+      Your Logo
+   &lt;/div&gt;
+   &lt;div class="codehim-search-trigger"&gt;&lt;/div&gt;
+   &lt;div class="codehim-search"&gt;
+      &lt;form&gt;
+         &lt;input class="search-text" placeholder="Type to search..." autocomplete="on" name="search" type="text" /&gt;
+         &lt;button class="search-now" name="submit" type="submit" disabled="true"&gt; Search &lt;/button&gt;
+      &lt;/form&gt;
+      &lt;div class="back-arrow"&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;!--//codehim-search--&gt;
+   &lt;!--Navigation Icon--&gt;
+   &lt;div class="nav-icon"&gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;/span&gt;
+   &lt;/div&gt;
+   &lt;nav class="codehim-nav"&gt;
+      &lt;div class="tab-container"&gt;
+         &lt;span class="tab-name tab-name1-active"&gt; My Projects&lt;/span&gt;
+         &lt;span class="tab-name"&gt; Tutorials  &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;!--//Tab Container--&gt;
+      &lt;div class="tab tab-active"&gt;
+         &lt;ul class="menu-item"&gt;
+            &lt;li&gt; &lt;a href="#1"&gt; Website Templates &lt;/a&gt; &lt;/li&gt;
+            &lt;li class="has-sub"&gt;
+               &lt;span class="dropdown-heading"&gt; Jquery Projects&lt;/span&gt; &lt;!--Do not add any link in li that has sub items // Use span for dropdown heading--&gt; 
+               &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#2"&gt; Sub Item 1&lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 2 &lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 3 &lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 4 &lt;/a&gt; &lt;/li&gt;
+               &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt; &lt;a href="#1"&gt; Recommended &lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt; &lt;a href="#1"&gt; Top Ten&lt;/a&gt; &lt;/li&gt;
+         &lt;/ul&gt;
+         &lt;ul class="my-codehim"&gt;
+            &lt;li&gt; &lt;a class="help" href="#1"&gt; Help & Feedback &lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt; &lt;a class="updates" href="#1"&gt; Subscribe Me&lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt; &lt;a class="request" href="#1"&gt; Request for Code&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+         &lt;div class="social"&gt;
+            &lt;div class="facebook"&gt;&lt;/div&gt;
+            &lt;div class="twitter"&gt;&lt;/div&gt;
+            &lt;div class="gplus"&gt; &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;!--//social--&gt;
+      &lt;/div&gt;
+      &lt;!--//Tab--&gt;
+      &lt;div class="tab"&gt;
+         &lt;ul class="menu-item"&gt;
+            &lt;li&gt; &lt;a href="#1"&gt; Latest Updates &lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt; &lt;a href="#1"&gt; How to Coding &lt;/a&gt; &lt;/li&gt;
+            &lt;li class="has-sub"&gt;
+               &lt;span class="dropdown-heading"&gt; Designing Tutorials&lt;/span&gt; 
+               &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#2"&gt; Sub Item 1&lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 2 &lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 3 &lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 4 &lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 5 &lt;/a&gt; &lt;/li&gt;
+               &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="has-sub"&gt;
+               &lt;span class="dropdown-heading"&gt; Development Tutorials&lt;/span&gt; 
+               &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#2"&gt; Sub Item 1&lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 2 &lt;/a&gt; &lt;/li&gt;
+                  &lt;li&gt; &lt;a href="#2"&gt; Sub Item 3 &lt;/a&gt; &lt;/li&gt;
+               &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt; &lt;a href="#1"&gt; Most Recently&lt;/a&gt; &lt;/li&gt;
+         &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;!--//Tab--&gt;
+   &lt;/nav&gt;
+&lt;/header&gt;
+&lt;div class="dim-overlay"&gt; &lt;/div&gt;
+</code>
+</pre>
+
+
+
+
+<h2> Swipe Menu CSS Code</h2>
+
+
+<pre class="language-css">
+<code>
+
+* {margin: 0; padding: 0; }
+body{
+font-family: 'Roboto', sans-serif;
+
+}
+/* Navigation Menu */
+
+.swipe-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ padding: 0;
+  box-sizing: border-box;
+  z-index: 3;
+  height: 52px;
+  will-change: transform;
+  transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
+
+
+.hide-nav {
+ transform: translateY(-120% !important); -webkit-transform: translateY(-120%) !important; }
+.show-nav {display: block;}
+
+/*Navigation Icon */
+.search-now{
+  text-align: center;
+  border-radius: 0px;
+  transition: .2s;
+-webkit-transition: .2s;
+-moz-transition: .2s;
+}
+
+
+.codehim-search input[type="text"]{
+ margin-left: 60px;
+ width: 50%;
+ outline: 0;
+ 
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 13px;
+  right: 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  
+}
+.nav-icon span{
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.nav-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.nav-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.nav-icon span:nth-child(3) {
+  top: 20px;
+}
+
+.nav-icon.open span:nth-child(1) {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.nav-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+.nav-icon.open span:nth-child(3) {
+  top: 10px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.search-now,
+.codehim-search input{
+   padding: 10px;
+   border: 0;
+   outline: 0;
+  font-size: 14px;
+}
+
+.codehim-search &gt; .back-arrow:before,
+.codehim-search-trigger:before{
+   font-family: FontAwesome;
+   font-weight: normal;
+   content: "\f002";
+   font-size: 17pt;
+}
+.codehim-search-trigger:before{content: "\f002";}
+.codehim-menu-trigger:before{content: "\f0c9";
+}
+
+.codehim-search &gt; .back-arrow:before{content: "\f060";}
+
+.close-menu,
+.codehim-menu-trigger,
+.codehim-search-trigger,
+.codehim-search &gt; .back-arrow {
+   position: fixed;
+   top: 5px;
+   width: 40px;
+   height: 40px;
+   outline: 0;
+   line-height: 40px;
+   cursor: pointer;
+   text-align: center;
+   font-weight: 400;
+  
+}
+
+.logo{
+   position: fixed;
+   top: 5px;
+    left: 10px;
+   width: 150px;
+   height: 40px;
+   outline: 0;
+   line-height: 40px;
+  font-size: 18pt;
+  font-family: 'Ropa Sans', sans-serif;
+}
+.logo img{
+   width: 120px;
+   height: auto;
+}
+
+
+.back-arrow{
+ left: -50px;
+ transition: .6s;
+ opacity: 0;
+
+}
+
+.show-back-arrow{
+   left: 20px !important; 
+   transition: .5s; 
+   opacity: 1 !important;
+}
+
+.close-menu,
+.codehim-menu-trigger{
+  right: 20px;
+}
+.codehim-search-trigger {
+   margin-left: -5px;
+   right: 70px;
+}
+
+.close-menu{
+-webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+.close-menu:before{
+  content: "\f00d";
+}
+.menu-item{
+  list-style: none;
+}
+
+.dropdown-heading,
+.menu-item li a {
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.dropdown-heading,
+.menu-item li a,
+.my-codehim li a {
+  display: block;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+
+}
+
+.codehim-nav{
+  font-family: 'Ropa Sans', sans-serif;
+   height: 100vh;
+   position: absolute;
+   top: 52px;
+   transition: .4s;
+   padding:0;
+   box-sizing: border-box;
+   overflow: auto;
+   
+}
+
+.my-codehim{
+   list-style: none;
+   font-size: 15px;
+   padding-top: 20px;
+}
+
+.show-menu{
+   z-index:5;
+   right: 0 !important;
+   transition: .4s;
+-webkit-transition: .4s;
+  border-radius: 0;
+}
+
+/* Dim background effect */
+
+.dim-overlay {
+             -webkit-animation-name: fadeIn;
+             animation-name: fadeIn;
+             animation-duration: .8s;
+             -webkit-animation-duration: .8s;
+}
+.dim-overlay:before {
+             content: "";
+             background-color: rgba(0, 0, 0, .4);
+             height: 100vh;
+             left: 0;
+             position: fixed;
+             top: 0;
+             width: 100%;
+             overflow: hidden;
+   z-index: 2;
+}
+
+@-webkit-keyframes fadeIn {
+             0% {
+                          opacity: 0;
+             }
+             100% {
+                          opacity: 1;
+             }
+}
+
+@keyframes fadeIn {
+             0% {
+                          opacity: 0;
+             }
+             100% {
+                          opacity: 1;
+             }
+}
+
+.help:before,
+.updates:before,
+.request:before{
+   font-family: FontAwesome;
+   font-size: 17px;  
+   padding-right: 20px;
+   margin-top: 6px;
+}
+.help:before{ content: "\f059"; }
+.updates:before{content: "\f09e"; }
+.request:before{ content: "\f1e6"; }
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes bounceIn {
+  from,
+  30%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  30%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+ }
+  50% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.fadeOutLeft {
+  -webkit-animation: fadeOutLeft .5s;
+  animation: fadeOutLeft .5s;
+  
+}
+
+
+@-webkit-keyframes in {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes in {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.touch{
+  width: 37px;
+  height: 37px;
+  display: inline-block;
+  position: absolute;
+  margin: -5px;
+  margin-top: 5px;
+
+}
+
+.splash{
+
+border-radius:100%;
+
+opacity:1;
+
+
+-webkit-transform:scale(0);
+
+-ms-transform:scale(0);
+
+transform:scale(0);
+-webkit-animation:ripple-effect .4s forwards;
+
+animation:ripple-effect .4s forwards;
+}
+
+
+
+
+@-webkit-keyframes ripple-effect{
+
+100%{
+
+opacity:0;
+
+-webkit-transform:scale(1.5);
+
+transform:scale(1.5)
+
+}
+
+}
+
+@keyframes ripple-effect{
+
+100%{
+
+opacity:0;
+
+-webkit-transform:scale(1.5);
+
+transform:scale(1.5)
+
+}
+
+}
+
+
+@media only screen and (max-width:480px){
+
+  .codehim-nav{
+      right: -250px;
+      width: 250px;
+   }
+.tab *{ 
+  display: none;
+}
+.tab-active * {
+  display: inherit !important;
+}
+
+ .show-popup .close-popup{
+   width: 45px;
+   height: 40px;
+   line-height: 40px;
+   position: absolute;
+   left: 20px;
+   top: 5px;
+   outline: 0;
+   font-size: 16pt;
+}
+
+
+.show-popup .close-popup:before{
+    content: "\f060";
+   font-family: FontAwesome;
+   color: #fff;
+}
+
+.codehim-search{
+   width: 100%;
+   height: 52px;
+   position: fixed;
+   top: 0px;
+   left: -100%;
+   line-height: 50px;
+   z-index: 4;
+  transition: .6s;
+}
+
+
+
+.show-search{
+   transition: .6s;
+   left: 0 !important;
+   
+}
+.social{
+text-align: center;
+margin-top: 20px;
+}
+.search-now:disabled{ 
+   transition: .3s;
+-webkit-transition: .3s;
+-moz-transition: .3s;
+  box-shadow: none;
+}
+
+
+@keyframes SlideLeft{
+   from {
+    transform: translateX(100%);
+    
+     }
+   to {
+   transform: translateX(0%);
+    
+   }
+}
+@keyframes SlideRight{
+   from {
+    transform: translateX(-100%);
+     }
+   to {
+   transform: translateX(0%);
+   
+   }
+}
+.SlideRight{
+   animation: SlideRight .3s;
+ -webkit-animation: SlideRight .3s;
+}
+.SlideLeft{
+   animation: SlideLeft .3s;
+ -webkit-animation: SlideLeft .3s;
+}
+
+
+
+}
+
+@keyframes growIn{
+    from{ transform: scale(0); 
+     opacity: 0;}
+    to { transform: scale(1); 
+      opacity: 1;}
+}
+
+.show-popup{
+   position: fixed;
+   top: 0;
+
+        z-Index: 100;
+
+        height: 100vh;
+
+        width: 100%;
+
+   box-sizing: border-box;
+   padding: 0;
+   animation: growIn .4s;
+ -webkit-animation: growIn .4s;
+ -moz-animation: growIn .4s;
+  overflow: auto;
+ -webkit-overflow: auto;
+ -moz-overflow: auto;
+} 
+.jam {
+   overflow: hidden;
+   -webkit-overflow: hidden;
+}
+.codehim-card{
+   font-family: 'Josefin Sans', sans-serif;
+   display: block; 
+   padding: 10px;
+   margin: 10px 20px;
+   border-radius: 4px;
+
+}
+.codehim-card p{
+
+   font-size: 14px;
+   line-height: 1.5;
+   font-weight: normal;
+   
+}
+
+
+
+ 
+.show-popup .top{
+   width: 100%;
+   height: 50px;
+}
+
+
+.show-popup h4 {
+   padding-left: 80px;
+   line-height: 50px;
+   font-size: 18px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: block !important;
+}
+.show-popup *{ display: inherit !important;}
+.popup-subscribe *,
+.popup-feedback *{ display: none; }
+.show-popup textarea,
+.show-popup input{
+   padding: 15px;
+   width: 80%;
+   display: block;
+   margin: 10px;
+   margin-left: auto;
+   margin-right: auto;
+   outline: 0;
+   box-sizing: border-box; 
+  
+}
+.show-popup textarea{
+   resize: none;
+   font-size: 16px;
+}
+
+
+
+.show-popup input[type="submit"]{
+   border: 0;
+   font-size: 16px;
+   transition: .4s;
+   -webkit-transition: .4s;
+    border-radius: 4px;
+  transition: .4s;
+   -webkit-transition: .4s;
+}
+
+.show-popup input[type="text"]{    
+     font-size: 16px;    
+}
+
+.show-popup input[type="text"]{
+    color: #444;
+   border-left: 0;
+     border-top: 0;
+     border-bottom: 1.5px solid #16a085;
+     border-right: 0;
+   caret-color: #16a085; 
+}
+
+.show-popup input[type="text"]:focus{
+   background: transparent;
+   outline: 0;
+}
+
+.never-miss{
+   text-align: center;
+   font-size: 16px;
+   font-weight: 700;
+   padding: 10px;
+
+}
+
+.has-sub ul{
+   list-style: none;
+   overflow: hidden;
+   height: 0px;
+   transition: .360s;
+   
+}
+
+
+
+.has-sub ul li a{
+   display: block;
+   padding: 12px 30px;
+   font-size: 13px;
+   border-bottom: 0;
+   
+}
+
+
+.has-sub span{
+  display: block;
+  box-sizing: border-box;
+  
+}
+
+.has-sub .dropdown-heading:after{
+   content: "\f078";
+   font-family: FontAwesome;
+   float: right;
+   margin-right: 10px;  
+   transition: 0.360s;
+   font-size: 10px;
+}
+
+.has-sub .down:after{
+   transform: rotateZ(180deg);
+-webkit-transform: rotateZ(180deg);
+-moz-transform: rotateZ(180deg);
+   transition: 0.360s;
+ -webkit-transition: 0.360s;
+ -moz-transition: 0.360s;
+}
+.tab-container{
+   overflow: hidden;
+   white-space: nowrap;
+   padding: 0;
+   margin: 0;
+  
+}
+
+.tab-name {
+   width: 50%;
+   display: inline-block;
+   text-align: center;
+   box-sizing: border-box;
+   height: 50px;
+   line-height: 50px;
+   font-size: 16px;
+   margin-bottom: -6px;
+  cursor: pointer;
+   padding: 0;
+  overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+
+.my-codehim li a{
+   height: 45px;
+   line-height: 45px;
+   padding-left: 15px;
+   
+   
+}
+
+.my-codehim li a{
+   color: #555;
+}
+
+.tab-name1-active,
+.tab-name2-active{
+   padding: 0;
+   box-sizing: border-box;
+   clear: both;
+   transition: .3s;
+}
+
+
+.tab-name2-active:before,
+.tab-name1-active:before{
+   content: "";
+   display: block;
+   width: 49%;
+   position: absolute;
+   margin-top: 48px;
+   line-height: 48px;
+   
+} 
+
+
+
+
+.tab-name1-active:before{
+animation: SlideLeft .3s;
+  -webkit-animation: SlideLeft .3s;
+ -moz-animation: SlideLeft .3s;
+}
+.tab-name2-active:before{
+   animation: SlideRight .3s;
+  -webkit-animation: SlideRight .3s;
+ -moz-animation: SlideRight .3s;
+} 
+
+
+
+
+
+@media only screen and (min-width: 480px){
+  .codehim-nav{
+      right: -500px;
+      width: 500px;
+   }
+  .tab *{ display: inherit; }
+
+  .tab{
+     width: 50%;
+     float: left;
+    box-sizing: border-box;
+  border-right: 1px solid rgba(0, 0, 0, 0.080);
+   }
+   .tab-name{
+    font-size: 18px;
+    font-weight: 700;
+}
+   .logo{
+      
+     width: 20%;
+     position: relative;
+     float: left;
+      
+   }
+.codehim-search{
+
+   height: 52px;
+   
+   position: fixed;
+   line-height: 50px;
+   top: 0;
+    right: 60px;
+   z-index: 4;
+transition: .6s;
+}
+
+.codehim-search{
+background: transparent;
+
+}
+
+  .social{
+    position: fixed;
+    top: 0;
+    width: 120px;
+    left: 20%;
+   text-align: center;
+    float: left;
+    height: 52px;
+   line-height: 52px;
+    display: block;
+   
+   }
+
+
+
+.codehim-search input[type="text"]:focus{
+outline: 0;
+  transition: .4s;
+}
+
+.search-now{
+  border-radius: 3px;
+
+}
+.codehim-search-trigger{
+   display: none;
+
+}
+
+
+
+}
+
+.social a{
+display: inline-block !important;
+}
+.facebook,
+.twitter,
+.gplus{
+   display: inline-block !important;
+   font-size: 16px;
+  padding: 5px;
+  border-radius: 3px;
+ width: 25px;
+ height: 25px;
+ line-height: 25px;
+transition: .4s;
+-webkit-transition: .4s;
+-moz-transition: .4s;
+
+}
+
+.facebook:before,
+.twitter:before,
+.gplus:before{
+font-family: FontAwesome;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.facebook:before{
+   content: "\f09a";
+}
+.twitter:before{
+   content: "\f099";
+
+}
+.gplus:before{
+  content: "\f0d5";
+
+} 
+.openswipe {
+   width: 90px;
+   background: transparent;
+   color: #fff;
+   position: fixed;
+   top: 50px;
+   height: 100vh;
+   right: 0;
+  
+}
+.closeswipe{
+   right: 230px !important;
+   width: 120px !important;
+   overflow: hidden;
+   height: 100vh;
+   z-index: 5;
+}
+/* Default Theme*/
+ .overlayer{
+background:              rgba(0, 0, 0, .35) !important;
+}
+
+.default-theme .my-codehim li a:hover{
+   background: #F65314;
+   color: #fff;
+}
+.default-theme .splash{
+background: #fff;
+
+}
+
+.default-theme {
+background: #7CBB00;
+
+}
+.default-theme .codehim-search input[type="text"]{
+ background: transparent; 
+ color: #666;
+
+}
+
+.default-theme .dropdown-heading:hover,
+.default-theme .menu-item li a:hover{ background: #7CBB00;
+color: #fff;
+}
+
+
+
+.default-theme .close-menu,
+.default-theme .codehim-menu-trigger,
+.default-theme .codehim-search-trigger,
+.default-theme .codehim-search &gt; .back-arrow {
+   color: #fff;
+
+}
+
+ .default-theme .codehim-search &gt; .back-arrow {
+background: #7CBB00;
+
+}
+
+
+
+.default-theme .search-now{
+  background: 
+#fff;
+  color: #7CBB00;
+  border-radius: 5px; 
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+ 
+}
+
+
+
+
+.default-theme .nav-icon span{
+background: #fff;
+height: 2px;
+
+}
+.default-theme .tab-container{
+   border-bottom: 4px solid #ccc;
+  
+}
+
+.default-theme .search-now:disabled{
+   background: rgba(0, 0, 0, 0.2);
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.default-theme .menu-item{
+color: #ccc;
+
+}
+
+
+.default-theme .logo{
+color: #fff;
+
+
+}
+
+.default-theme .dropdown-heading,
+.default-theme .menu-item li a {
+ border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+  color: #666;
+
+}
+
+.default-theme span.dropdown-heading{
+   color: #666;
+
+}
+
+.default-theme .has-sub ul li a{
+color: #666;
+
+}
+
+
+
+.default-theme .codehim-nav{
+background: #ecf0f1;
+
+}
+
+
+
+.default-theme .codehim-search{
+background: #7CBB00; 
+
+}
+
+.default-theme .show-popup &gt; .close-popup{
+   color: #fff;
+
+}
+
+
+.default-theme .show-popup .top{
+background: rgb(46,54,65);
+
+}
+
+.default-theme .show-popup textarea{
+border: 1px solid #bbb;
+caret-color: #16a085;
+color: #666;
+
+}
+
+.default-theme .show-popup input[type="submit"]{
+   background: #7CBB00; 
+   color: rgba(255, 255, 255, 0.9);
+
+}
+
+.default-theme .show-popup input[type="submit"]:hover{
+   background: rgba(0, 0, 0, 0.40);
+} 
+
+.default-theme .has-sub ul{
+   background: #fff;
+
+}
+
+.default-theme .has-sub ul li a:hover{
+    background: #F65314;
+    color: #fff;
+}
+
+
+.default-theme .tab-name {
+color: #777;
+
+}
+
+.default-theme .tab-name:hover {
+   color: #7CBB00;
+    transition: .3s;
+}
+
+
+.default-theme .tab-name1-active,
+.default-theme .tab-name2-active{
+color: #7CBB00;
+
+}
+.default-theme .tab-name2-active:before,
+.default-theme .tab-name1-active:before{
+border-bottom: 4px solid #7CBB00;
+
+}
+
+
+.default-theme .facebook,
+.default-theme .twitter,
+.default-theme .gplus{
+background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+
+}
+
+
+.default-theme .twitter:hover{background: #55ACEE}
+.default-theme .facebook:hover{background: #3B5998}
+.default-theme .gplus:hover{background: #EA4335}
+
+ .show-popup{
+   background: #eee;
+   color: #666;
+}
+
+.default-theme .search-now:hover{
+box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.4);
+}
+
+ .codehim-card p{
+   color: #666;
+
+}
+ .show-popup h4 {
+
+   color: rgba(255, 255, 255, 0.7);
+   background: #7CBB00;
+}
+.default-theme .search-now:disabled{ 
+   background: rgba(0, 0, 0, 0.25);
+   transition: .3s;
+-webkit-transition: .3s;
+-moz-transition: .3s;
+  box-shadow: none;
+}
+.default-theme .codehim-search input[type="text"]:focus{
+  color: #fff;
+  outline: 0;
+  border: 0;
+
+}
+
+@media only screen and (min-width: 480px){
+.default-theme .codehim-search input[type="text"]:focus{
+border-left: 0;
+border-right: 0;
+border-top: 0;
+border-bottom: 1px solid #fff;
+background: transparent;
+color: #fff;
+
+}
+
+}
+
+
+.default-theme .codehim-search input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.default-theme .codehim-search input[type="text"]:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.default-theme .codehim-search input[type="text"]::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.9);
+}
+</code>
+</pre>
+
+
+
+<h2>Swipe Menu jQuery Code</h2>
+
+
+<pre class="language-js">
+<code>
+$(document).ready(function(){
+
+//DropDown 
+$(".dropdown-heading").click(function(){
+var n = $(".has-sub").find("span:hover + ul li").length;
+var dropdown = 37*n;
+var _todrop = $(".has-sub").find("span:hover + ul");
+var nodrop = $(".has-sub ul");
+$(this).toggleClass("down");
+$(_todrop).animate({"height" : dropdown}, 100);
+if ($(_todrop).height() == dropdown){
+  $(_todrop).animate({"height" : 0}, 100);
+}
+ if ($(nodrop).height(dropdown)){
+$(nodrop).not(_todrop).height(0);
+$(".dropdown-heading").not(this).removeClass("down");}
+});
+
+// SHOW/HIDE NAV
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    if(Math.abs(lastScrollTop - st) &lt;= delta)
+        return;
+    if (st &gt; lastScrollTop && st &gt; navbarHeight && !$(".codehim-nav").hasClass("show-menu")){
+$('header').removeClass('show-nav').addClass('hide-nav');
+$(".openswipe").css({'display' : 'none'});
+
+    } else {
+        if(st + $(window).height() &lt; $(document).height()) {
+$('header').removeClass('hide-nav').addClass('show-nav');
+$(".openswipe").css({'display' : 'block'});
+        }
+    }
+
+    lastScrollTop = st;
+}
+
+$(".search-text").on('keydown', function(){
+      if ($(this).val() == ""){
+    $(".search-now").attr('disabled', true);}
+    else{
+   $(".search-now").attr('disabled', false);}
+});
+
+$(".codehim-search-trigger").click(function(){
+   $(".codehim-search").addClass("show-search"); 
+$(".search-text").focus();
+$(".back-arrow").addClass("show-back-arrow");
+$(".dim-overlay").fadeIn();
+$(".logo").fadeOut();
+$(this).addClass("splash");
+});
+
+$(".back-arrow").click(function(){
+   $(".codehim-search").addClass("fadeOutLeft").removeClass("show-search");
+$(this).removeClass("show-back-arrow");
+$('.myprofile-icons').removeClass('hide').addClass('show');
+$(".codehim-search-trigger").removeClass("splash");
+
+if ($(".nav-icon").hasClass("open")){
+    // do not remove overlayer 
+} else { $(".dim-overlay").fadeOut(); }
+$(".logo").fadeIn(1000);
+});
+
+$(".nav-icon").click(function(){
+
+$(this).toggleClass("open");
+$(".codehim-nav").toggleClass("show-menu");
+
+$(".tab-container").toggleClass("showme");
+
+$(".dim-overlay").fadeIn();
+
+if ($(".nav-icon").hasClass("open")){
+//nothing to do
+} else { $(".dim-overlay").fadeOut();}
+
+
+if ($(".openswipe").hasClass("closeswipe")){
+$("#swipezone").removeClass("closeswipe");} 
+else { $("#swipezone").addClass("closeswipe");} 
+
+});
+
+
+
+var el = document.getElementById('swipezone');
+swipedetect(el, function(swipedir){
+    
+if (swipedir == "right"){
+closeMenu();  }
+if (swipedir == "left"){
+openMenu();
+    }
+
+
+
+});
+
+function closeMenu(){
+ $(".nav-icon").removeClass("open");
+
+$(".codehim-nav").removeClass("show-menu");
+$(".dim-overlay").fadeOut();
+$("#swipezone").removeClass("closeswipe");
+
+}
+function openMenu(){
+$(".nav-icon").addClass("open");
+
+$(".codehim-nav").addClass("show-menu");
+$(".dim-overlay").fadeIn();
+$("#swipezone").addClass("closeswipe");
+}
+
+$(".updates").click(function(){
+$(".popup-subscribe").addClass("show-popup");
+$(".mail-text").focus();
+$("body").addClass("jam");
+});
+$(".close-popup").click(function(){
+$(".popup-subscribe").removeClass("show-popup");
+$("body").removeClass("jam");
+});
+
+
+$(".help").click(function(){
+$(".popup-feedback").addClass("show-popup");
+$("body").addClass("jam");
+});
+$(".close-popup").click(function(){
+$(".popup-feedback").removeClass("show-popup");
+$("body").removeClass("jam");
+
+});
+
+
+var tab = [ 
+  $('.tab-name').eq(0),
+  $('.tab-name').eq(1),
+  $('.tab').eq(0),
+  $('.tab').eq(1),
+  "tab-name1-active",
+  "tab-active SlideLeft",
+  "tab-active SlideRight",
+   "tab-name2-active"
+  ];
+
+ $(tab[0]).click(function(){
+  $(this).addClass(tab[4]); 
+$(tab[3]).removeClass(tab[6]);
+$(tab[2]).addClass(tab[5]);
+ if ($(tab[1]).hasClass(tab[7]))
+{$(tab[1]).removeClass(tab[7]);}
+});
+
+$(tab[1]).click(function(){
+  $(this).addClass(tab[7]); 
+$(tab[2]).removeClass(tab[5]);
+$(tab[3]).addClass(tab[6]);
+ if ($(tab[0]).hasClass(tab[4]))
+{$(tab[0]).removeClass(tab[4]);}
+});
+
+$(tab[2]).mouseenter(function(){
+$(tab[0]).addClass("tab-name1-active");
+$(tab[1]).removeClass("tab-name2-active");
+});
+$(tab[3]).mouseenter(function(){
+$(tab[1]).addClass("tab-name2-active");
+$(tab[0]).removeClass("tab-name1-active");
+});
+
+$(".dim-overlay").hide();
+
+
+});
+function swipedetect(el, callback){
+    var touchsurface = el,
+    swipedir,
+    startX,
+    startY,
+    distX,
+    distY,
+    threshold = 150, //required min distance traveled to be considered swipe
+    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+    allowedTime = 1000, // maximum time allowed to travel that distance
+    elapsedTime,
+    startTime,
+    handleswipe = callback || function(swipedir){}
+  
+    touchsurface.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0]
+        swipedir = 'none'
+        dist = 0
+        startX = touchobj.pageX
+        startY = touchobj.pageY
+        startTime = new Date().getTime() // record time when finger first makes contact with surface
+        e.preventDefault()
+    }, false)
+  
+    touchsurface.addEventListener('touchmove', function(e){
+        e.preventDefault() // prevent scrolling when inside DIV
+    }, false)
+  
+    touchsurface.addEventListener('touchend', function(e){
+        var touchobj = e.changedTouches[0]
+        distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
+        distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
+        elapsedTime = new Date().getTime() - startTime // get time elapsed
+        if (elapsedTime &lt;= allowedTime){ // first condition for awipe met
+            if (Math.abs(distX) &gt;= threshold && Math.abs(distY) &lt;= restraint){ // 2nd condition for horizontal swipe met
+                swipedir = (distX &lt; 0)? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
+            }
+            else if (Math.abs(distY) &gt;= threshold && Math.abs(distX) &lt;= restraint){ // 2nd condition for vertical swipe met
+                swipedir = (distY &lt; 0)? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
+            }
+        }
+        handleswipe(swipedir)
+        e.preventDefault()
+    }, false)
+}
+</code>
+</pre>
+
+
+</article>
+</main>   <!--//End Main-->
+
+<footer class="codehim-footer">
+
+<p> Copyright © 2018 - CodeHim </p>
+<p> All Rights Reserved </p>
+
+
+</footer>
+
+</body>
+
+
+
+
+</html>
